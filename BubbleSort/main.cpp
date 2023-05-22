@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int vetor[5] = {5,3,1,4,2};
+int contador;
+
+
+//escreva um algoritimo que ordene uma amostra numérica
+void ImprimirFunc(int qtd){
+	printf("\n");
+	for (int i=0; i<qtd; i++)
+	if (i<qtd-1) printf("%i, ", vetor[i]);
+	else printf("%i. (operacoes: %i)", vetor[i],contador);
+	
+}
+
+void bubbleSort(int qtd){
+int aux; 
+int contador = 0;
+for(int i=0; i < qtd - 1; i++ )
+ 	for(int j=0; j < qtd - 1 - i; j++)
+ 		if(vetor[j] > vetor[j+1]){
+ 			aux = vetor[j];
+			vetor[j] = vetor[j+1];
+			vetor[j+1] = aux; 		
+			contador ++;	
+ 		}
+	
+}
+
+void seletionSort(int qtd){
+	int aux; 
+	int contador = 0;
+	for(int i=0; i<qtd-1; i++)
+ 		for(int j=i+1; j<qtd; j++)
+ 			if(vetor[j] < vetor[i]){
+ 				aux = vetor[j];
+				vetor[j] = vetor[i];
+				vetor[i] = aux; 		
+				contador ++;	
+ 		}
+	
+}
+
+int main(){
+	ImprimirFunc(5);
+	bubbleSort(5);
+	//selectionSort(5)
+	ImprimirFunc(5);
+}
