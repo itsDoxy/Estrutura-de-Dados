@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
+//escreva um algoritimo que ordene uma amostra numerica
 
 int vetor[5] = {5,3,1,4,2};
 int contador;
 
-
-//escreva um algoritimo que ordene uma amostra numérica
 void ImprimirFunc(int qtd){
 	printf("\n");
 	for (int i=0; i<qtd; i++)
@@ -47,6 +46,6 @@ int main(){
 	setlocale(LC_ALL,"Portuguese");
 	ImprimirFunc(5);
 	bubbleSort(5);
-	//selectionSort(5)
+	selectionSort(5)
 	ImprimirFunc(5);
 }
