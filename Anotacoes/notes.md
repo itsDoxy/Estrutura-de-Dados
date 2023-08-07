@@ -1,6 +1,5 @@
 ## Flags de impressão
 
-
 - `%d` Usado para imprimir valores inteiros de uma váriavel.
 
 - `%s` Usado para imprimir uma cadeia de caracteres.
@@ -50,10 +49,6 @@ Esses valores são úteis em situações em que é necessário verificar o taman
       "Valor total é: %u \n",
       min, max, minShort, maxShort, total
     );
-
     return 0;
   }
   ```
-
-#### Saída:
-  ![Exemplo visual linked_list](./img/limits.png)
